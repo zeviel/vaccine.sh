@@ -1,5 +1,5 @@
 # vaccine.sh
-Web-API for [vaccine](https://vk.com/vaccine_app) an vk service which is clicker game
+Web-API for [vaccine](https://vk.com/vaccine_app) an vk service which is a clicker game
 
 ## Example
 ```bash
