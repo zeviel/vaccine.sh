@@ -5,6 +5,7 @@ sign=null
 vk_user_id=null
 vk_ts=null
 vk_ref=null
+user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36"
 
 function authenticate() {
 	# 1 - sign: (string): <sign>
@@ -28,7 +29,7 @@ function authenticate() {
 function get_account_info() {
 	curl --request GET \
 		--url "$api/v1/user" \
-		--user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36" \
+		--user-agent "$user_agent" \
 		--header "content-type: application/json" \
 		--header "user: https://vaccine.skyreglis.com/master/?reglis_type=vk&reglis_platform=web&$params"
 }
@@ -36,7 +37,7 @@ function get_account_info() {
 function get_account_profile() {
 	curl --request GET \
 		--url "$api/v2/profile" \
-		--user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36" \
+		--user-agent "$user_agent" \
 		--header "content-type: application/json" \
 		--header "user: https://vaccine.skyreglis.com/master/?reglis_type=vk&reglis_platform=web&$params"
 }
@@ -45,7 +46,7 @@ function get_rating() {
 	# 1 - type: (string): <type>
 	curl --request GET \
 		--url "$api/v1/rating?type=$1" \
-		--user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36" \
+		--user-agent "$user_agent" \
 		--header "content-type: application/json" \
 		--header "user: https://vaccine.skyreglis.com/master/?reglis_type=vk&reglis_platform=web&$params"
 }
@@ -53,7 +54,7 @@ function get_rating() {
 function get_levels() {
 	curl --request GET \
 		--url "$api/v1/levels" \
-		--user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36" \
+		--user-agent "$user_agent" \
 		--header "content-type: application/json" \
 		--header "user: https://vaccine.skyreglis.com/master/?reglis_type=vk&reglis_platform=web&$params"
 }
@@ -61,7 +62,7 @@ function get_levels() {
 function get_improvement() {
 	curl --request GET \
 		--url "$api/v1/improvement" \
-		--user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36" \
+		--user-agent "$user_agent" \
 		--header "content-type: application/json" \
 		--header "user: https://vaccine.skyreglis.com/master/?reglis_type=vk&reglis_platform=web&$params"
 }
@@ -72,7 +73,7 @@ function buy_improvement() {
 	# 2 - index: (integer): <index - default: 0>
 	curl --request POST \
 		--url "$api/v1/improvement/buy" \
-		--user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36" \
+		--user-agent "$user_agent" \
 		--header "content-type: application/json" \
 		--header "user: https://vaccine.skyreglis.com/master/?reglis_type=vk&reglis_platform=web&$params" \
 		--data '{
@@ -85,7 +86,7 @@ function buy_improvement() {
 function get_tasks() {
 	curl --request GET \
 		--url "$api/v1/task" \
-		--user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36" \
+		--user-agent "$user_agent" \
 		--header "content-type: application/json" \
 		--header "user: https://vaccine.skyreglis.com/master/?reglis_type=vk&reglis_platform=web&$params"
 }
@@ -94,7 +95,7 @@ function complete_task() {
 	# 1 - type: (string): <type>
 	curl --request POST \
 		--url "$api/v1/task/complete" \
-		--user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36" \
+		--user-agent "$user_agent" \
 		--header "content-type: application/json" \
 		--header "user: https://vaccine.skyreglis.com/master/?reglis_type=vk&reglis_platform=web&$params" \
 		--data '{
