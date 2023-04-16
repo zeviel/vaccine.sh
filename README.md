@@ -3,6 +3,6 @@ Web-API for [vaccine](https://vk.com/vaccine_app) an vk service which is a click
 
 ## Example
 ```bash
-source vaccine.sh
+source ./vaccine.sh
 authenticate "sign" "vk_user_id" "vk_ts" "vk_ref"
 ```
